@@ -1,7 +1,7 @@
 # nubank-project
 
 Explanation about the data structure
-
+```
 (def accounts (ref (hash-map :XYZ (hash-map :balance (hash-map :171000 0 :171001 100 :171015 200 :171017 300 :171018 100 :171020 -600 :171025 400 :171030 0)
                                        :statement (hash-map :171001 [{:desc "purchase" :amount 200}]
                                                             :171012 [{:desc "purchase" :amount 300}
@@ -19,7 +19,9 @@ Explanation about the data structure
                                        :statement (hash-map :171018 [{:desc "purchase" :amount 200}
                                                                      {:desc "deposit" :amount 100}]
                                                             :171020 [{:desc "deposit" :amount 200}]))
-                        )))
+                        )))
+```
+
 
 I choose to modelize each account by an asssociation key/value because that way with the id of the account you have an easy access to everything about a person, O(1).
 An account is composed of two entries:
