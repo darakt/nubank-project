@@ -33,6 +33,8 @@ I picked "yyMMdd" as format for the date because that way the date came as a num
 The balance got an entry if it's state evolve, a day without statement won't appear here, that's in an effort to save memory and scalability.
 The statement is a map with the date of the operation as key, that way it has a complexity O(1), and the value is a liste of map, each represent a statement, if the statement was postpone beside the description and the amount of the statement a third tuple succeed save the date of the enforcement. 
 
-For the server part, my choice would have been a queue (RabbitMQ) where the "transaction" would go and workers at the end can proccess the tasks, that way si very scalable and enforce a good data flow.
+Unfortunatly I didn't success to install properly ring, "ring.middleware.json" couldn't be add to my path and I've never used swagger before which was a problem to create something with compojure.
+But in an ideal world, my choice would have been a queue (RabbitMQ) where the "transaction" would go and workers at the end can proccess the tasks, that way is very scalable and enforce a good data flow, I already used that pattern to create an API for timed push notification (iOS and Android).
+
 
 
